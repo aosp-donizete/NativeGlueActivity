@@ -5,6 +5,7 @@ add_library(native-activity SHARED main.cpp)
 # Export ANativeActivity_onCreate(),
 # Refer to: https://github.com/android-ndk/ndk/issues/381.
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -u ANativeActivity_onCreate")
+
 #its necessary to be compiled into our binary
 #its only a wrapper class around ANativeActivity_onCreate
 #we could do it by our self's
